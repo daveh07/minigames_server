@@ -158,16 +158,14 @@ Chess piece objects are then initaited to the relevant board indices,
 - COSC220-2022 Slack group
 - Weekly meetings via Teams
 
-### Group Roles & Responsibilities
+### EXAMPLE
 
-- David Hill will be our GUI, unit tests & documentation
-- Chisomo Banzi will work on piece logic
-- Mick McCluskey will be our documentation, pieces/board logic and game design
+![image](https://user-images.githubusercontent.com/51868751/194701654-2e0a751c-a740-40c9-b103-65619d35c395.png)
 
-## Group Contact
 
-If you and your team wish to work with us, please contact us via:
+![image](https://user-images.githubusercontent.com/51868751/194701672-251761d2-c56f-4d0a-ab80-53ec90c7c0fe.png)
 
-- Refer to our issue on Gitlab
-- In the COSC220-2022 Slack group
-- Email any one listed in the above table
+
+![image](https://user-images.githubusercontent.com/51868751/194701730-e434ada9-c798-4e7c-8c5c-4bf21912851e.png)
+
+
