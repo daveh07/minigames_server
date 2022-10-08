@@ -1,27 +1,49 @@
 ##Introduction
+# Mini Game Server
+<!-- Generated with shields.io -->
+[![Java Build Status](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fhopper.une.edu.au%2Fjenkins%2Fjob%2Fcosc220_2022_java%2F&label=Java%20Build%20Status)](https://hopper.une.edu.au/jenkins/job/cosc220_2022_java/)
+[![Java Tests](https://img.shields.io/jenkins/tests?compact_message&jobUrl=https%3A%2F%2Fhopper.une.edu.au%2Fjenkins%2Fjob%2Fcosc220_2022_java%2F&label=Java%20Tests)](https://hopper.une.edu.au/jenkins/job/cosc220_2022_java/lastCompletedBuild/testReport/)
+[![Scala Build Status](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fhopper.une.edu.au%2Fjenkins%2Fjob%2Fcosc220_2022_scala%2F&label=Scala%20Build%20Status)](https://hopper.une.edu.au/jenkins/job/cosc220_2022_scala/)
+[![Scala Tests](https://img.shields.io/jenkins/tests?compact_message&jobUrl=https%3A%2F%2Fhopper.une.edu.au%2Fjenkins%2Fjob%2Fcosc220_2022_scala%2F&label=Scala%20Tests)](https://hopper.une.edu.au/jenkins/job/cosc220_2022_scala/lastCompletedBuild/testReport/)
 
+The Mini Game Server monorepository created by class COSC220 Software Development Studio 2 during Trimester 2 2022.
 
-## Open Issue
+There is more than one project in the same git repository. These are divided up largely by language.
 
-- #37 - Create Game - Chess
-- Note: #37 is left open as a working branch for continuous development.
-- Currently the working branch is name: 37-chess-server
-- In working branch, unit tests still to be added
-- #45 - Game manager
+To open the `javaprojects`, rather than open the toplevel directory in VS Code, open the `javaprojects` folder in VS Code.
 
-## Closed issues
+Likewise, each language has its own devcontainer for simplicity.
 
-- #46 - Tile class (Server side)
-- #47 - Piece class (Server side)
-- #48 - Pawn class (Server side)
-- #49 - Rook class (Server side)
-- #50 - Bishop class (Server side)
-- #51 - Knight class (Server side)
-- #52 - Queen class (Server side)
-- #53 - King class (Server side)
-- #54 - Chess client (client side)
-- #55 - Tiles class (client side)
-- #56 - Piece class (client side)
+## Projects
+| Folder name | Description |
+|---|---|
+| `javaprojects` | This contains a set-up that is (more-or-less) traditional for this unit. It is a multi-module gradle project with modules for: <ul>   <li>`common` - Ordinary Java code we want to include in both the server and the client</li>   <li>`server` - The minigame network server. This is based on Vertx, which is a Node.js-like server for Java.</li>   <li>`client` - A Java Swing client that can connect to our server</li> </ul> |
+| `scalaclient` | New, experimental, for the brave. This contains a web client written in Scala.js. It is built using sbt. It is totally independent, except that it can talk to the server over HTTP and JSON. |
+| `pythonclient` | Under construction. |
+
+## Usage
+### Java
+#### Server
+To run the server, `cd` into `javaprojects`
+```sh
+./gradlew server:run --args="41234"
+```
+or some other port number.
+
+This will start a Vertx server, listening on the port you specified.
+
+- It defaults to 8080, but on turing someone's probably already using that.
+- You can test this by opening a browser, and visiting http://localhost:41234/ping (replace 41234 with the port number you used)
+    - Note: it's just "http" not "https"
+
+#### Client
+You'll need to start the server first!
+
+From the `javaprojects` directory:
+```sh
+./gradlew client:run --args="localhost:41234"
+```
+Note: Remember to use the same port number you used to start the server.
 
 ## Documentation
 
