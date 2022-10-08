@@ -53,10 +53,6 @@ The majority of the game logic and UI is built out on the client side. This is d
 
 The Chess source code can be found in the chess package directory within the javaprojects project directory in: javaprojects -> client -> src -> main -> java -> minigames.client -> chess
 
-The proposed chess game design is outlined in the flow chart/diagram below:
-
-![image](uploads/85e6f7eb45d475df0f17ceb83f232b40/image.png)
-
 Inside the directory there are 4 Java files/classes:
 
 1. CheckmateManager.java - This class manages the logic for check, refer to the \*public void inCheck()\* method & checkmate for each of the kings, refer to the \*private void checkmate()\* method.
