@@ -32,7 +32,6 @@ or some other port number.
 
 This will start a Vertx server, listening on the port you specified.
 
-- It defaults to 8080, but on turing someone's probably already using that.
 - You can test this by opening a browser, and visiting http://localhost:41234/ping (replace 41234 with the port number you used)
     - Note: it's just "http" not "https"
 
